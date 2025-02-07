@@ -172,7 +172,7 @@ a:hover {
 }
 #sign-in-area,
 #sign-up-area {
-background: url(../img/backgrounds/hero-bg.jpg) fixed;
+background: url(../img/backgrounds/hexa.jpg) fixed;
 }
 #sign-in-area .title-big,
 #sign-up-area .title-big {
@@ -194,6 +194,7 @@ background: url(../img/backgrounds/hero-bg.jpg) fixed;
   text-align: center; /* Text center align */
   border-radius: 10px; /* Rounded corners */
 }
+
 #main-features #feature-list-item-1,
 #main-features #feature-list-item-3 {
   background: #ecf0f1;
@@ -295,8 +296,7 @@ background: url(../img/backgrounds/hero-bg.jpg) fixed;
   padding: 22px 64px;
 }
 #bottom {
-  background: #333;
-  color: #fff;
+  background-color: rgba(0, 0, 0, 1);
 }
 #bottom a {
   color: #fff;
