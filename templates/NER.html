@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NER - Live Text Analysis</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* Background Styling */
+        body {
+            background-image: url('..//Images.png//NER_Background_image.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Container Box */
+        .container {
+            max-width: 500px;
+            margin: auto;
+            height:550px;
+            background: rgba(3, 1, 31, 0.8); /* Dark violet transparent overlay */
+            padding: 80px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 24, 181, 0.94);
+        }
+        .container p{
+            color:white;
+        }
+
+        h1 {
+            color:white;
+        }
+
+        /* Floating NLP Icon */
+        .animated-icon {
+            font-size: 40px;
+            color:rgb(3, 22, 117);
+            animation: floatEffect 3s ease-in-out infinite;
+        }
+
+        @keyframes floatEffect {
+            0% { transform: translateY(0px); opacity: 0; }
+            50% { transform: translateY(-5px); opacity: 1; }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Typing Animation */
+        .output-box {
+            font-size: 18px;
+            font-weight: bold;
+            color:rgb(0, 0, 128);
+            min-height: 50px;
+        }
+
+        /* Input Box */
+        .input-box {
+            width: 90%;
+            padding: 10px;
+            margin: 10px ;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            min-height: 20vh;
+        }
+
+        /* AI Processing Animation */
+        .loader {
+            display: flex;
+            justify-content: center;
+            margin: 20%;
+        }
+
+        .loader div {
+            width: 10px;
+            height: 10px;
+            margin: 5px;
+            background:rgb(0, 21, 128);
+            border-radius: 50%;
+            animation: aiWave 1s infinite alternate;
+        }
+
+        .loader div:nth-child(2) { animation-delay: 0.2s; }
+        .loader div:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes aiWave {
+            0% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.3; }
+        }
+
+        /* Glowing Button */
+        .button {
+            background:rgb(19, 3, 163);
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            box-shadow: 0px 0px 15px rgba(8, 11, 180, 0.8);
+            background:rgb(5, 18, 203);
+            
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            margin-bottom: 20%; /* White box ke neeche space badhane ke liye */
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .logo-container img {
+            width: 40px; /* Logo size adjust karo */
+            height: 40px;
+            margin-right: 10px; /* Logo aur text ke beech space */
+        }
+        
+        .logo-container span {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .logo-container a{
+            font-size: 18px;
+            color:white;
+            font-weight: bold;
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+
+    
+    <div class="logo-container">
+        <img src="..//Images.png//nlp_logo_2.png">
+        <span><a href="Features.html" >NLP app</a></span>
+    </div>
+
+    <div class="container">
+        <h1>Named Entity Recognition <i class="fas fa-brain animated-icon"></i></h1>
+        <p>Enter text below, and our NLP system will analyze it.</p>
+
+        <textarea id="userInput" class="input-box" rows="4" placeholder="Type something here..."></textarea>
+        <br>
+        <br>
+        <button class="button" onclick="analyzeText()">Analyze</button>
+        <br>
+        <br>
+        <div class="loader" id="loading" style="display: none;">
+            <div></div><div></div><div></div>
+        </div>
+
+        <div id="output" class="output-box"></div>
+
+        <a href="Features.html" class="button">Back to features</a>
+    </div>
+
+    <script>
+        function analyzeText() {
+            let text = document.getElementById("userInput").value;
+            let outputDiv = document.getElementById("output");
+            let loadingDiv = document.getElementById("loading");
+
+            if (text.length === 0) {
+                outputDiv.innerHTML = "Please enter some text!";
+                return;
+            }
+
+            // Show AI Processing Animation
+            loadingDiv.style.display = "flex";
+            outputDiv.innerHTML = "";
+
+            setTimeout(() => {
+                loadingDiv.style.display = "none"; // Hide loader after processing
+
+                // Simulated NLP Response
+                let response;
+                if (text.toLowerCase().includes("name is") || text.toLowerCase().includes("called")) {
+                    response = "🔍 Named Entity Found: Possible Name!";
+                } else {
+                    response = "🔍 NLP Processing: No specific entity detected!";
+                }
+
+                typeWriterEffect(response, 50);
+            }, 2000); // Simulate 2-second NLP processing time
+        }
+
+        function typeWriterEffect(text, speed) {
+            let i = 0;
+            let output = document.getElementById("output");
+            output.innerHTML = "";
+            function type() {
+                if (i < text.length) {
+                    output.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+    </script>
+
+</body>
+</html>

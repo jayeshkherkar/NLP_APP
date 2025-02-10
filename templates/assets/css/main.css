@@ -126,6 +126,8 @@ a:hover {
 #hero-area{
   background-color: rgb(8, 11, 12);
   background-size: cover;
+  height:50vh;
+
   color: #fff;
 }
 #hero-area .btn {
@@ -139,6 +141,27 @@ a:hover {
 }
 #hero-area .row {
   padding: 100px 0;
+}
+.col-md-12{
+  padding-top:5px;
+}
+.Logo {
+  width: 5vh;  /* Adjust size */
+  height: 4vh;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.signup_Logo{
+  width: 5vh;  /* Adjust size */
+  height: 4vh;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.signIn_Logo{
+  width: 5vh;  /* Adjust size */
+  height: 4vh;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 .hero-inner {
   position: relative;
@@ -173,6 +196,7 @@ a:hover {
 #sign-in-area,
 #sign-up-area {
 background: url(../img/backgrounds/hexa.jpg) fixed;
+height:90vh;
 }
 #sign-in-area .title-big,
 #sign-up-area .title-big {
@@ -192,7 +216,7 @@ background: url(../img/backgrounds/hexa.jpg) fixed;
   color: white; /* White text */
   padding: 20px; /* Inner spacing */
   text-align: center; /* Text center align */
-  border-radius: 10px; /* Rounded corners */
+  border-radius: 1px; /* Rounded corners */
 }
 
 #main-features #feature-list-item-1,
@@ -295,6 +319,7 @@ background: url(../img/backgrounds/hexa.jpg) fixed;
 #features .show-box {
   padding: 22px 64px;
 }
+
 #bottom {
   background-color: rgba(0, 0, 0, 1);
 }
@@ -347,4 +372,3 @@ background: url(../img/backgrounds/hexa.jpg) fixed;
   background: #007bb6;
   color: #fff;
 }
-s

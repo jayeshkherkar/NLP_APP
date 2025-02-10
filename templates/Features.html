@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLP Use Cases</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* General Styling */
+        body {
+            background-color: #0d0d0d;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+
+        /* Container for Cards */
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        /* Individual Box */
+        .box {
+            background: #1a1a1a;
+            padding: 80px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s, background 0.3s;
+            box-shadow: 0 4px 6px #002366;
+            cursor: pointer;
+            opacity: 5; /* Initially hidden */
+            transform: translateY(50px); /* Start from below */
+            animation: fadeInUp 0s ease-out forwards;
+        }
+
+        .box:hover {
+            background:#002366;
+            transform: translateY(-5px);
+            color:white;
+        }
+
+        /* Icons */
+        .box i {
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: #00ffcc;
+        }
+
+        .box p, .box a {
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        .back-arrow {
+            position: absolute;
+            top: 45px;
+            left: 20px;
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .back-arrow:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class = "Main_body"> 
+
+        <a href="index.html" class="back-arrow">
+            &#8592; Back
+        </a>
+        <h2>Text Use Cases</h2>
+
+        <div class="container">
+            <div class="box"><i class="fas fa-comments"></i><a href = "9.html"><p>Chatbot/Conversational AI</p></a></div>
+            <div class="box"><i class="fas fa-project-diagram"></i><a href = "8.html"><p>Classification</p></a></div>
+            <div class="box"><i class="fas fa-code"></i><a href = "7.html"><p>Code Generation</p></a></div>
+            <div class="box"><i class="fas fa-spell-check"></i><a href = "6.html"><p>Grammar and Spelling Correction</p></a></div>
+            <div class="box"><i class="fas fa-newspaper"></i><a href = "5.html"><p>Headline Generation</p></a></div>
+            <div class="box"><i class="fas fa-glasses"></i><a href = "4.html"><p>Intent Classification</p></a></div>
+            <div class="box"><i class="fas fa-filter"></i><a href = "3.html"><p>Keyword and Keyphrase Extractions</p></a></div>
+            <div class="box"><i class="fas fa-flag"></i><a href = "2.html"><p>Language Detection</p></a></div>
+            <div class="box"><i class="fas fa-table"></i><a href = "NER.html"><p>NER (entity extraction)</p></a></div>
+        </div>
+
+    </div>
+
+</body>
+</html>
