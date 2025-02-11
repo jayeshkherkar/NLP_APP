@@ -22,23 +22,24 @@
             margin: auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
+            gap: 10px;
+            
         }
 
         /* Individual Box */
         .box {
             background: #1a1a1a;
-            padding: 60px;
+            padding: 55px;
             border-radius: 8px;
             text-align: center;
             transition: transform 0.3s, background 0.3s;
-            box-shadow: 0 0px 10px #002366;
+            box-shadow: 0 0px 10px #4da8da;
             cursor: pointer;
             opacity: 5; /* Initially hidden */
             transform: translateY(50px); /* Start from below */
             animation: fadeInUp 0s ease-out forwards;
-            height:70px;
-            width:200px;
+            height:50px;
+            width:220px;
 
 
         }
@@ -49,7 +50,7 @@
         
 
         .box:hover {
-            background:#002366;
+            background:#4da8da;
             transform: translateY(-5px);
             color:white;
         }
@@ -181,10 +182,16 @@
             justify-content: center;
             margin-right: -35vh;
             right:5vh;
+            
+        }
+        .logout-btn a{
+            text-decoration:none;
+            color:white;
         }
 
         .logout-btn:hover {
             background-color: #444;
+            background:#4da8da;
         }
 
         /* Adjust Log Out Button Position */
@@ -201,42 +208,49 @@
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">
-            <img src="..//Images.png//nlp_logo_2.png" alt="Logo"> 
-            <span>NLP Studio</span>
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Platform <i class="fas fa-caret-down"></i></a></li>
-            <li><a href="index.html">Pricing</a></li>
-            <li><a href="index.html">Company <i class="fas fa-caret-down"></i></a></li>
-            <li><a href="Features.html">Use Cases <i class="fas fa-caret-down"></i></a></li>
-            <li><a href="index.html">Blog <i class="fas fa-caret-down"></i></a></li>
-            <li><a href="Features.html">Learn</a></li>
-        </ul>
-        <button class="logout-btn">
-            <i class="fas fa-sign-out-alt"></i> Log out
-        </button>
-    </nav>
+    <div class="Main_Body">
 
-    <div class = "Main_body"> 
+                <nav class="navbar">
+                    <div class="logo">
+                        <img src="..//Images.png//nlp_logo_2.png" alt="Logo"> 
+                        <span>NLP Studio</span>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Platform <i class="fas fa-caret-down"></i></a></li>
+                        <li><a href="index.html">Pricing</a></li>
+                        <li><a href="index.html">Company <i class="fas fa-caret-down"></i></a></li>
+                        <li><a href="Features.html">Use Cases <i class="fas fa-caret-down"></i></a></li>
+                        <li><a href="index.html">Blog <i class="fas fa-caret-down"></i></a></li>
+                        <li><a href="Features.html">Learn</a></li>
+                    </ul>
+                    <button class="logout-btn">
+                        <a href="sign-in.html" class="fas fa-sign-out-alt",>Log out</a> 
+                    </button>
+                </nav>
 
-        
-        <h2>Text Use Cases</h2>
 
-        <div class="container">
-            <div class="box"><i class="fas fa-comments"></i><a href = "9.html"><p>Chatbot/Conversational AI</p></a></div>
-            <div class="box"><i class="fas fa-project-diagram"></i><a href = "8.html"><p>Classification</p></a></div>
-            <div class="box"><i class="fas fa-code"></i><a href = "7.html"><p>Code Generation</p></a></div>
-            <div class="box"><i class="fas fa-spell-check"></i><a href = "6.html"><p>Grammar and Spelling Correction</p></a></div>
-            <div class="box"><i class="fas fa-newspaper"></i><a href = "5.html"><p>Headline Generation</p></a></div>
-            <div class="box"><i class="fas fa-glasses"></i><a href = "4.html"><p>Intent Classification</p></a></div>
-            <div class="box"><i class="fas fa-filter"></i><a href = "3.html"><p>Keyword and Keyphrase Extractions</p></a></div>
-            <div class="box"><i class="fas fa-flag"></i><a href = "2.html"><p>Language Detection</p></a></div>
-            <div class="box"><i class="fas fa-table"></i><a href = "NER.html"><p>NER (entity extraction)</p></a></div>
-        </div>
+                <h2>Text Use Cases</h2>
 
-    </div>
+                <div class="container">
+                    <div class="box"><i class="fas fa-comments"></i><a href = "9.html"><p>Chatbot/Conversational AI</p></a></div>
+                    <div class="box"><i class="fas fa-project-diagram"></i><a href = "8.html"><p>Classification</p></a></div>
+                    <div class="box"><i class="fas fa-code"></i><a href = "7.html"><p>Code Generation</p></a></div>
+                    <div class="box"><i class="fas fa-spell-check"></i><a href = "6.html"><p>Grammar and Spelling Correction</p></a></div>
+                    <div class="box"><i class="fas fa-newspaper"></i><a href = "5.html"><p>Headline Generation</p></a></div>
+                    <div class="box"><i class="fas fa-glasses"></i><a href = "4.html"><p>Intent Classification</p></a></div>
+                    <div class="box"><i class="fas fa-filter"></i><a href = "3.html"><p>Keyword and Keyphrase Extractions</p></a></div>
+                    <div class="box"><i class="fas fa-flag"></i><a href = "2.html"><p>Language Detection</p></a></div>
+                    <div class="box"><i class="fas fa-table"></i><a href = "NER.html"><p>NER (entity extraction)</p></a></div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    
+
+                </div>
+
+    </div>            
 
 </body>
 </html>
