@@ -45,10 +45,16 @@ a:hover {
   background: #2980b9;
   color: #fff;
 }
-.title-big {
+.Heading-big{
   text-align: center;
   font-size: 60px;
   color:rgb(234, 238, 240);
+}
+.title-big {
+  text-align: center;
+  /*font-size: 60px;*/
+  color:rgb(234, 238, 240);
+  /*color: #3498DB;*/
 }
 .subtitle-big {
   text-align: center;
@@ -198,6 +204,7 @@ a:hover {
 background: url(../img/backgrounds/hexa.jpg) fixed;
 height:90vh;
 }
+
 #sign-in-area .title-big,
 #sign-up-area .title-big {
   color: #fff;
