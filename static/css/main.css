@@ -107,7 +107,7 @@ a:hover {
 .navbar-default .navbar-nav > .active,
 .navbar-default .navbar-nav li:hover {
   color: #fff;
-  background: rgba(41, 40, 40, 0.42);
+  background: #4da8da;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
