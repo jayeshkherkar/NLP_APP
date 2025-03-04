@@ -4,207 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NLP Use Cases</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/Features.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <style>
-        /* General Styling */
-        body {
-            background-color: #0d0d0d;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
-        }
-
-
-        /* Container for Cards */
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            
-        }
-
-        /* Individual Box */
-        .box {
-            background: #1a1a1a;
-            padding: 55px;
-            border-radius: 8px;
-            text-align: center;
-            transition: transform 0.3s, background 0.3s;
-            box-shadow: 0 0px 10px #4da8da;
-            cursor: pointer;
-            opacity: 5; /* Initially hidden */
-            transform: translateY(50px); /* Start from below */
-            animation: fadeInUp 0s ease-out forwards;
-            height:50px;
-            width:220px;
-
-
-        }
-        html, body {
-            overflow-x: hidden; /* Horizontal scroll disable */
-        }
-        
-        
-
-        .box:hover {
-            background:#4da8da;
-            transform: translateY(-5px);
-            color:white;
-        }
-
-        /* Icons */
-        .box i {
-            font-size: 30px;
-            margin-bottom: 10px;
-            color: #00ffcc;
-            
-        }
-
-        .box p, .box a {
-            color: white;
-            text-decoration:none;
-            font-size:20px;
-            
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        /* Navbar Styling */
-        /* General Styles */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #111;
-        }
-
-        /* Navbar */
-        .navbar {
-            display: flex;
-            position: relative;
-            /*align-items: center;*/
-            justify-content: space-between;
-            background-color: #181818;
-            padding: 1vh 20vw;
-            height: 7vh;
-            width:63%;
-            left: -18.5px; /* Thoda left shift karne ke liye negative value */
-            right: +10px;
-            top: -23px;
-            font-size:1.5vw;
-
-        }
-
-        /* Logo Section */
-        .logo {
-            display: flex;
-            align-items: center;
-            margin-left: -280px;
-        }
-
-        .logo img {
-            width: 60px; /* Adjust logo size */
-            margin-right: 8px;
-
-        }
-
-        .logo span {
-            color: white;
-            font-weight: bold;
-            font-size: 20px;
-            bottom:2px;
-        }
-    
-
-        /* Navbar Links */
-        .nav-links {
-            list-style: none;
-            display: flex;
-            align-items: center;
-            gap: 20px;  /* Add space between links */
-            padding: 5px 25px;
-            margin-left: 20px;
-            flex-grow: 1; /* Push logout button to right */
-        }
-
-        .nav-links li {
-            position: relative;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #ddd;
-            font-size: 20px;
-            transition: color 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-
-        }
-
-        .nav-links a:hover {
-            color: #4da8da;
-        }
-
-        /* Dropdown Icon Styling */
-        .nav-links i {
-            font-size: 12px;
-            color: #4da8da;
-        }
-
-        /* Logout Button */
-        .logout-btn {
-            background-color: #2a2a2a;
-            color: white;
-            border: 1px solid #444;
-            padding: 22px 22px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 17px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            width:120px;
-            height:30px;
-            align-items: center;  /* Vertical alignment */
-            justify-content: center;
-            margin-right: -35vh;
-            right:5vh;
-            
-        }
-        .logout-btn a{
-            text-decoration:none;
-            color:white;
-        }
-
-        .logout-btn:hover {
-            background-color: #444;
-            background:#4da8da;
-        }
-
-        /* Adjust Log Out Button Position */
-        .logout-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding-right: 20px;
-        }
-
-            
-                
-    </style>
 </head>
 <body>
 
@@ -212,7 +13,7 @@
 
                 <nav class="navbar">
                     <div class="logo">
-                        <img src="..//Images.png//nlp_logo_2.png" alt="Logo"> 
+                        <img src="/static/img/features/nlp_logo_2.png" alt="Logo"> 
                         <span>NLP Studio</span>
                     </div>
                     <ul class="nav-links">
@@ -224,7 +25,7 @@
                         <li><a href="Features.html">Learn</a></li>
                     </ul>
                     <button class="logout-btn">
-                        <a href="sign-in.html" class="fas fa-sign-out-alt",>Log out</a> 
+                        <a href="/login" class="fas fa-sign-out-alt",>Log out</a> 
                     </button>
                 </nav>
 
@@ -240,7 +41,7 @@
                     <div class="box"><i class="fas fa-glasses"></i><a href = "4.html"><p>Intent Classification</p></a></div>
                     <div class="box"><i class="fas fa-filter"></i><a href = "3.html"><p>Keyword and Keyphrase Extractions</p></a></div>
                     <div class="box"><i class="fas fa-flag"></i><a href = "2.html"><p>Language Detection</p></a></div>
-                    <div class="box"><i class="fas fa-table"></i><a href = "NER.html"><p>NER (entity extraction)</p></a></div>
+                    <div class="box"><i class="fas fa-table"></i><a href = "/NER"><p>NER (entity extraction)</p></a></div>
                     <br>
                     <br>
                     <br>

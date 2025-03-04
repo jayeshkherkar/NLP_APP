@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entities Table</title>
+    <link rel="stylesheet" href="/static/css/NER_output.css"> <!-- CSS file linked -->
+</head>
+<body>
+
+    <h2>Entities</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Text</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for i in response%}
+                {%for e in i["entities"]%}
+                <tr>
+                  <td>{{e['text']}}</td>
+                  <td>{{e['type']}}</td> 
+                </tr>   
+                {%endfor%}      
+            {%endfor%}
+        </tbody>
+    </table>
+
+</body>
+</html>

@@ -151,23 +151,29 @@ a:hover {
 .col-md-12{
   padding-top:5px;
 }
-.Logo {
-  width: 5vh;  /* Adjust size */
-  height: 4vh;
+.Logo {  /* Adjust size */
   margin-right: 10px;
   vertical-align: middle;
+  width: 50px;
+  height:50px;
 }
 .signup_Logo{
-  width: 5vh;  /* Adjust size */
-  height: 4vh;
-  margin-right: 10px;
-  vertical-align: middle;
+  width: 8vh;  /* Adjust size */
+  height: 8vh;
+  top:-3vh;
+  left:-20vh;
+  position:relative;
+  margin-right: -19vh;
+  vertical-align: top;
 }
 .signIn_Logo{
-  width: 5vh;  /* Adjust size */
-  height: 4vh;
-  margin-right: 10px;
-  vertical-align: middle;
+  width: 8vh;  /* Adjust size */
+  height: 8vh;
+  top:-3vh; /*ye logo ko upar ya niche sarkane me madad karega*/
+  left:-20vh;/* ye logo ko right or left shift karne me madad karega agar position relative he to*/
+  position:relative;
+  margin-right: -19vh;/*ye jo likha hua he 'NLP functionality' ye right or left karne me madad karega*/
+  vertical-align: top;/* Logo aur text ke beech space */
 }
 .hero-inner {
   position: relative;
