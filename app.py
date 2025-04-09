@@ -2,7 +2,6 @@ from flask import Flask, render_template,request,redirect
 from db import Database
 import api
 
-
 app = Flask(__name__,static_folder="static")
 dbo = Database()
 
@@ -61,7 +60,6 @@ def Perform_ner():
     text = request.form.get('NER_Text')
     entity = request.form.get('Entity_Jo_Search_karni_he')
     response2 = api.ner(text,entity)
-    #return response2
     return render_template('ner_output.html', response = response2)
 
 def perform_conversation():
