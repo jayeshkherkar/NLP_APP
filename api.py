@@ -1,8 +1,7 @@
 import nlpcloud
 from dotenv import load_dotenv
 import os
-import time
-import spacy
+
 
 load_dotenv()
 #retriving api key
