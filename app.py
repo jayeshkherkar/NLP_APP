@@ -1,6 +1,7 @@
 from flask import Flask, render_template,request,redirect
 from db import Database
 import api
+import gpt
 
 app = Flask(__name__,static_folder="static")
 dbo = Database()
@@ -51,6 +52,10 @@ def profile():
 def NER():
    return render_template('NER.html')
 
+@app.route('/conversation')
+def Perform_conversation():
+    return render_template('conversation.html')
+
 @app.route('/Back to features')  
 def back():
     return render_template('Features.html')
@@ -62,8 +67,13 @@ def Perform_ner():
     response2 = api.ner(text,entity)
     return render_template('ner_output.html', response = response2)
 
+@app.route('/perform_conversation_with_gpt', methods=['POST'])
 def perform_conversation():
-    pass
+    userinput = request.form.get('question')
+    message = [{'role': 'user', 'content': userinput}]
+    response = gpt.gpt_35_api(message)
+    return response
+    
     
     
 if __name__ == "__main__": 
